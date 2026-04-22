@@ -1,0 +1,213 @@
+.theme-academic {
+  --first-color: #f6f1e9;
+  --second-color: #d7c2a3;
+  --third-color: #18252c;
+  --fourth-color: #5e8b8c;
+  --gradient-col1: #0e171b;
+  --gradient-col2: #18252c;
+  --surface-color: rgba(255, 255, 255, 0.08);
+  --card-color: rgba(248, 243, 236, 0.92);
+  --card-text: #172228;
+  --muted-text: #52616b;
+  --border-color: rgba(215, 194, 163, 0.2);
+  --glow-one: rgba(94, 139, 140, 0.16);
+  --glow-two: rgba(215, 194, 163, 0.2);
+  --card-hover-border: rgba(215, 194, 163, 0.45);
+  --card-hover-bg: rgba(255, 249, 241, 0.98);
+  --card-hover-shadow: 0 24px 48px rgba(9, 16, 20, 0.16);
+}
+
+.theme-paper {
+  --first-color: #16242d;
+  --second-color: #52616b;
+  --third-color: #f6f1e9;
+  --fourth-color: #5e8b8c;
+  --gradient-col1: #f7f2eb;
+  --gradient-col2: #e9e0d2;
+  --surface-color: rgba(255, 255, 255, 0.65);
+  --card-color: rgba(255, 255, 255, 0.92);
+  --card-text: #172228;
+  --muted-text: #52616b;
+  --border-color: rgba(22, 36, 45, 0.1);
+  --glow-one: rgba(94, 139, 140, 0.1);
+  --glow-two: rgba(215, 194, 163, 0.18);
+  --card-hover-border: rgba(94, 139, 140, 0.35);
+  --card-hover-bg: rgba(247, 251, 251, 0.98);
+  --card-hover-shadow: 0 24px 48px rgba(22, 36, 45, 0.12);
+}
+
+.theme-cloud {
+  --first-color: #173247;
+  --second-color: #597487;
+  --third-color: #f5f9fc;
+  --fourth-color: #6d98b6;
+  --gradient-col1: #f8fbfe;
+  --gradient-col2: #e8f1f7;
+  --surface-color: rgba(255, 255, 255, 0.72);
+  --card-color: rgba(255, 255, 255, 0.94);
+  --card-text: #193142;
+  --muted-text: #617483;
+  --border-color: rgba(23, 50, 71, 0.1);
+  --glow-one: rgba(109, 152, 182, 0.14);
+  --glow-two: rgba(190, 214, 230, 0.18);
+  --card-hover-border: rgba(109, 152, 182, 0.34);
+  --card-hover-bg: rgba(247, 251, 254, 0.98);
+  --card-hover-shadow: 0 24px 48px rgba(22, 36, 45, 0.12);
+}
+
+.theme-mist {
+  --first-color: #20303b;
+  --second-color: #6a7d89;
+  --third-color: #f8fbfc;
+  --fourth-color: #7ca6a6;
+  --gradient-col1: #fbfdfe;
+  --gradient-col2: #edf4f5;
+  --surface-color: rgba(255, 255, 255, 0.72);
+  --card-color: rgba(255, 255, 255, 0.95);
+  --card-text: #24343e;
+  --muted-text: #6b7b84;
+  --border-color: rgba(32, 48, 59, 0.08);
+  --glow-one: rgba(124, 166, 166, 0.12);
+  --glow-two: rgba(208, 225, 227, 0.2);
+  --card-hover-border: rgba(124, 166, 166, 0.32);
+  --card-hover-bg: rgba(248, 252, 252, 0.98);
+  --card-hover-shadow: 0 24px 48px rgba(22, 36, 45, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  background: var(--third-color);
+  color: var(--first-color);
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  transition: color 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+a:hover {
+  color: var(--fourth-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 4%;
+  padding-right: 4%;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--gradient-col1), var(--gradient-col2)) fixed;
+  background-size: cover;
+  animation: fadeIn 0.8s ease-in;
+  position: relative;
+}
+
+.wrapper::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, var(--glow-one), transparent 34%),
+    radial-gradient(circle at bottom right, var(--glow-two), transparent 28%);
+  pointer-events: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  width: 50vw;
+  padding: 12px 25px;
+  margin: 22px auto;
+}
+
+h1,
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--first-color);
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+p,
+li {
+  line-height: 1.7;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--third-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--second-color);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fourth-color);
+}
+
+@media only screen and (max-width: 1400px) {
+  section {
+    width: 65vw;
+    margin: 18px auto;
+  }
+}
+
+@media only screen and (max-width: 1048px) {
+  section {
+    width: 75vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    width: 92vw;
+    padding: 10px 14px;
+    margin: 14px auto;
+  }
+}

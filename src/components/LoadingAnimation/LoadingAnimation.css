@@ -1,0 +1,48 @@
+.loading-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+    margin: 0 10px;
+    animation: bounce 0.5s ease-in-out infinite;
+}
+
+.circle:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.circle:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.circle:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}

@@ -1,0 +1,18 @@
+/* Remove or comment out all existing styles */
+
+/* Remove the rule that hides the default cursor */
+/* * {
+    cursor: none !important;
+} */
+
+/* Add a rule to ensure the default cursor is used */
+* {
+    cursor: default;
+}
+
+/* You can keep specific cursor styles for interactive elements if desired */
+a, button, [role="button"] {
+    cursor: pointer;
+}
+
+/* Remove or comment out all other custom cursor styles */

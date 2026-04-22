@@ -1,0 +1,81 @@
+#interests {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 15px;
+}
+
+.life-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.life-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: var(--card-color);
+  color: var(--card-text);
+  border-radius: 20px;
+  box-shadow: 0 18px 42px rgba(22, 36, 45, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+}
+
+.life-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 48px rgba(22, 36, 45, 0.12);
+}
+
+.life-image,
+.life-badge {
+  flex-shrink: 0;
+  width: 180px;
+}
+
+.life-image {
+  object-fit: cover;
+}
+
+.life-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(94, 139, 140, 0.2), rgba(215, 194, 163, 0.28));
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.9rem;
+}
+
+.life-content {
+  flex-grow: 1;
+  padding: 24px;
+}
+
+.life-content h2 {
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+  color: var(--card-text);
+}
+
+.life-description {
+  color: var(--muted-text);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .life-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .life-entry {
+    flex-direction: column;
+  }
+
+  .life-image,
+  .life-badge {
+    width: 100%;
+    min-height: 110px;
+  }
+}
