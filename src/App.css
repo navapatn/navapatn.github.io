@@ -88,7 +88,7 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   background: var(--third-color);
   color: var(--first-color);
-  font-size: 16px;
+  font-size: 17px;
 }
 
 a {
@@ -205,6 +205,10 @@ li {
 }
 
 @media only screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
   section {
     width: 92vw;
     padding: 10px 14px;
