@@ -43,7 +43,7 @@ export const SOCIAL_LINKS = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/navapatn",
+    link: "https://www.linkedin.com/in/navapat/",
     showText: false,
   },
   {
