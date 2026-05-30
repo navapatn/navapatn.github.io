@@ -108,8 +108,8 @@ img {
 .wrapper {
   width: 100%;
   min-height: 100vh;
-  padding-left: 4%;
-  padding-right: 4%;
+  padding-left: 3%;
+  padding-right: 3%;
   overflow: hidden;
   background: linear-gradient(180deg, var(--gradient-col1), var(--gradient-col2)) fixed;
   background-size: cover;
@@ -148,8 +148,8 @@ img {
 }
 
 section {
-  width: 50vw;
-  padding: 12px 25px;
+  width: min(92vw, 1120px);
+  padding: 12px 18px;
   margin: 22px auto;
 }
 
@@ -161,7 +161,7 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: 3.35rem;
   margin-bottom: 18px;
 }
 
@@ -193,14 +193,20 @@ li {
 
 @media only screen and (max-width: 1400px) {
   section {
-    width: 65vw;
+    width: min(94vw, 1080px);
     margin: 18px auto;
   }
 }
 
 @media only screen and (max-width: 1048px) {
   section {
-    width: 75vw;
+    width: min(95vw, 960px);
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  h1 {
+    font-size: 2.9rem;
   }
 }
 
@@ -213,5 +219,26 @@ li {
     width: 92vw;
     padding: 10px 14px;
     margin: 14px auto;
+  }
+
+  h1 {
+    font-size: 2.35rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  section {
+    width: 94vw;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  h1 {
+    font-size: 2.1rem;
   }
 }

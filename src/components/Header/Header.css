@@ -4,7 +4,7 @@
 header {
     position: sticky;
     background: transparent;
-    width: 50vw;
+    width: min(92vw, 1120px);
     margin: 20px auto 30px auto; /* Reduced top and bottom margins */
     top: 0;
     left: 0;
@@ -38,12 +38,17 @@ nav #hidden {
 
 @media only screen and (max-width: 1400px) {
     header {
-        width: 65vw;
+        width: min(94vw, 1080px);
     }
 }
 @media only screen and (max-width: 1048px) {
     header {
-        width: 75vw;
+        width: min(95vw, 960px);
+    }
+    nav ul li {
+        margin-left: 6px;
+        margin-right: 6px;
+        font-size: 0.96rem;
     }
 }
 @media only screen and (max-width: 768px) {

@@ -201,6 +201,28 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1180px) {
+  .publication-image,
+  .publication-visual {
+    width: 220px;
+    height: 150px;
+  }
+
+  .publication-content {
+    padding: 13px 16px;
+  }
+
+  .publication-content h2 {
+    font-size: 1.15rem;
+  }
+
+  .publication-date,
+  .publication-venue,
+  .publication-authors {
+    font-size: 0.96rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .publication-entry,
   .publication-image,

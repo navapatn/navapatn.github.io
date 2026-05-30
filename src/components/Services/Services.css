@@ -95,3 +95,18 @@
     height: 56px;
   }
 }
+
+@media (min-width: 769px) and (max-width: 1060px) {
+  .timeline-grid {
+    gap: 14px;
+  }
+
+  .timeline-item {
+    padding: 16px;
+  }
+
+  .timeline-logo-wrap {
+    width: 56px;
+    height: 56px;
+  }
+}

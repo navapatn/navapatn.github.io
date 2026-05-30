@@ -74,6 +74,17 @@
   }
 }
 
+@media (min-width: 901px) and (max-width: 1180px) {
+  .talk-card {
+    grid-template-columns: minmax(260px, 390px) 1fr;
+    gap: 18px;
+  }
+
+  .talk-content p {
+    line-height: 1.65;
+  }
+}
+
 @media (max-width: 768px) {
   .talk-card {
     padding: 18px;
