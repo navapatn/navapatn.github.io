@@ -146,6 +146,7 @@ export const PUBLICATIONS = [
     date: "2026-05-26",
     authors: "N.Nananukul, M.Kejriwal",
     link: "https://dl.acm.org/doi/10.1145/3786335.3813224",
+    image: publicationImage("clinicbot.png"),
     tags: ["AI in Healthcare", "Large Language Models"],
     publicationType: "paper-conference",
   },
