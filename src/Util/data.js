@@ -68,7 +68,7 @@ export const NEWS = [
   {
     date: "Apr 2026",
     content:
-      "🎉 Our new demonstration paper <strong>ClinicBot</strong> is accepted at the <strong>ACM Conference on AI and Agentic Systems (CAIS 2026)</strong>!",
+      "🎉 Our new demonstration paper <a href='https://dl.acm.org/doi/10.1145/3786335.3813224' target='_blank' rel='noopener noreferrer'><strong>ClinicBot</strong></a> is accepted at the <strong>ACM Conference on AI and Agentic Systems (CAIS 2026)</strong>!",
   },
   {
     date: "Apr 2026",
@@ -91,7 +91,7 @@ export const FEATUREDPUBLICATIONS = [
   {
     id: 1,
     name: "LOGicalThought: Logic-Based Ontological Grounding of LLMs for High-Assurance Reasoning",
-    journal: "Under review at ICML 2026 · arXiv preprint",
+    journal: "arXiv preprint",
     date: "2026-04-01",
     authors: "N.Nananukul, Y.Zhang, R.Lee, E.Boxer, J.May, V.G.Gogate, J.Pujara, et al.",
     link: "https://arxiv.org/abs/2510.01530",
@@ -102,7 +102,7 @@ export const FEATUREDPUBLICATIONS = [
   {
     id: 2,
     name: "HealthEQKG: A Knowledge Graph and Data Model for Health Equity Research",
-    journal: "ISWC 2025",
+    journal: "International Semantic Web Conference (ISWC 2025)",
     date: "2025-01-01",
     authors: "N.Nananukul, M.Kejriwal",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:ufrVoPGSRksC",
@@ -113,7 +113,7 @@ export const FEATUREDPUBLICATIONS = [
   {
     id: 3,
     name: "Medical school ranking and neighborhood characteristics of initial practice location among physicians",
-    journal: "JAMA Network Open 2025",
+    journal: "JAMA Network Open (2025)",
     date: "2025-01-01",
     authors: "N.Nananukul, M.Kejriwal",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:W7OEmFMy1HYC",
@@ -128,7 +128,7 @@ export const FEATUREDPUBLICATIONS = [
   {
     id: 4,
     name: "Semi-Automatic Extraction and Analysis of Health Equity Covariates in Registered Research Projects",
-    journal: "Applied Sciences 2025",
+    journal: "Applied Sciences (2025)",
     date: "2025-01-01",
     authors: "N.Nananukul, M.Kejriwal",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:_FxGoFyzp5QC",
@@ -140,9 +140,19 @@ export const FEATUREDPUBLICATIONS = [
 
 export const PUBLICATIONS = [
   {
+    id: 13,
+    name: "ClinicBot: A Guideline-Grounded Clinical Chatbot with Prioritized Evidence RAG and Verifiable Citations",
+    journal: "ACM Conference on AI and Agentic Systems (CAIS 2026)",
+    date: "2026-05-26",
+    authors: "N.Nananukul, M.Kejriwal",
+    link: "https://dl.acm.org/doi/10.1145/3786335.3813224",
+    tags: ["AI in Healthcare", "Large Language Models"],
+    publicationType: "paper-conference",
+  },
+  {
     id: 1,
     name: "An Analysis of Artificial Intelligence Adoption in NIH-Funded Research",
-    journal: "Under review at ICDH 2026 · arXiv preprint",
+    journal: "IEEE International Conference on Digital Health (ICDH 2026) · arXiv preprint",
     date: "2026-01-02",
     authors: "N.Nananukul, M.Kejriwal",
     link: "https://arxiv.org/pdf/2604.07424",
@@ -153,7 +163,7 @@ export const PUBLICATIONS = [
   {
     id: 2,
     name: "LOGicalThought: Logic-Based Ontological Grounding of LLMs for High-Assurance Reasoning",
-    journal: "Under review at ICML 2026 · arXiv preprint",
+    journal: "arXiv preprint",
     date: "2026-04-01",
     authors: "N.Nananukul, Y.Zhang, R.Lee, E.Boxer, J.May, V.G.Gogate, J.Pujara, et al.",
     link: "https://arxiv.org/abs/2510.01530",
@@ -164,7 +174,7 @@ export const PUBLICATIONS = [
   {
     id: 3,
     name: "HealthEQKG: A Knowledge Graph and Data Model for Health Equity Research",
-    journal: "ISWC 2025",
+    journal: "International Semantic Web Conference (ISWC 2025)",
     date: "2025-01-01",
     authors: "N.Nananukul, M.Kejriwal",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:ufrVoPGSRksC",
@@ -175,7 +185,7 @@ export const PUBLICATIONS = [
   {
     id: 4,
     name: "Medical school ranking and neighborhood characteristics of initial practice location among physicians",
-    journal: "JAMA Network Open 2025",
+    journal: "JAMA Network Open (2025)",
     date: "2025-01-01",
     authors: "N.Nananukul, M.Kejriwal",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:W7OEmFMy1HYC",
@@ -190,7 +200,7 @@ export const PUBLICATIONS = [
   {
     id: 5,
     name: "Balancing Efficiency and Quality in LLM-Based Entity Resolution on Structured Data",
-    journal: "ASONAM 2024",
+    journal: "IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM 2024)",
     date: "2024-01-01",
     authors: "N.Nananukul, M.Kejriwal",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:Y0pCki6q_DkC",
@@ -201,7 +211,7 @@ export const PUBLICATIONS = [
   {
     id: 6,
     name: "What if Red Can Talk? Dynamic Dialogue Generation Using Large Language Models",
-    journal: "Wordplay @ ACL 2024",
+    journal: "Workshop on Wordplay at the Annual Meeting of the Association for Computational Linguistics (Wordplay @ ACL 2024)",
     date: "2024-01-02",
     authors: "N.Nananukul, W.Wongkamjan",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:qjMakFHDy7sC",
@@ -212,7 +222,7 @@ export const PUBLICATIONS = [
   {
     id: 7,
     name: "Multi-source data integration for segmentation of unannotated MRI images",
-    journal: "IEEE Journal of Biomedical and Health Informatics 2024",
+    journal: "IEEE Journal of Biomedical and Health Informatics (2024)",
     date: "2024-01-01",
     authors: "N.Nananukul, H.Soltanian-Zadeh, M.Rostami",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:2osOgNQ5qMEC",
@@ -223,7 +233,7 @@ export const PUBLICATIONS = [
   {
     id: 8,
     name: "Cost-efficient prompt engineering for unsupervised entity resolution in the product matching domain",
-    journal: "Discover Artificial Intelligence 2024",
+    journal: "Discover Artificial Intelligence (2024)",
     date: "2024-01-01",
     authors: "N.Nananukul, K.Sisaengsuwanchai, M.Kejriwal",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:UeHWp8X0CEIC",
@@ -234,7 +244,7 @@ export const PUBLICATIONS = [
   {
     id: 9,
     name: "Semi-Automatic Extraction and Analysis of Health Equity Covariates in Registered Research Projects",
-    journal: "Applied Sciences 2025",
+    journal: "Applied Sciences (2025)",
     date: "2025-01-01",
     authors: "N.Nananukul, M.Kejriwal",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:_FxGoFyzp5QC",
@@ -245,7 +255,7 @@ export const PUBLICATIONS = [
   {
     id: 10,
     name: "HALO: an ontology for representing and categorizing hallucinations in large language models",
-    journal: "Disruptive Technologies 2024",
+    journal: "Disruptive Technologies (2024)",
     date: "2024-01-01",
     authors: "N.Nananukul, M.Kejriwal",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:9yKSN-GCB0IC",
@@ -256,7 +266,7 @@ export const PUBLICATIONS = [
   {
     id: 11,
     name: "ISAC: An Interactive Hierarchical Interface for Efficient Structural Analysis and Vertex Search in Complex Networks",
-    journal: "ASONAM 2024",
+    journal: "IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM 2024)",
     date: "2024-01-01",
     authors: "N.Nananukul, K.Sisaengsuwanchai, M.Kejriwal",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:YsMSGLbcyi4C",
@@ -267,7 +277,7 @@ export const PUBLICATIONS = [
   {
     id: 12,
     name: "The plausibility machine commonsense (PMC) dataset: A massively crowdsourced human-annotated dataset for studying plausibility in large language models",
-    journal: "Data in Brief 2024",
+    journal: "Data in Brief (2024)",
     date: "2024-01-01",
     authors: "N.Nananukul, K.Shen, M.Kejriwal",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=h_YWvdAAAAAJ&citation_for_view=h_YWvdAAAAAJ:IjCSPb-OGe4C",
