@@ -149,6 +149,8 @@ export const PUBLICATIONS = [
     image: publicationImage("clinicbot.png"),
     tags: ["AI in Healthcare", "Large Language Models"],
     publicationType: "paper-conference",
+    researchFocus: "Healthcare AI",
+    selectedRank: 2,
   },
   {
     id: 1,
@@ -160,6 +162,7 @@ export const PUBLICATIONS = [
     image: publicationImage("ICDH-collaboration-network.png"),
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "article",
+    researchFocus: "Healthcare AI",
   },
   {
     id: 2,
@@ -171,6 +174,8 @@ export const PUBLICATIONS = [
     image: publicationImage("ICML-approach-4.png"),
     tags: ["Neurosymbolic AI", "Large Language Models", "Trustworthy AI"],
     publicationType: "article",
+    researchFocus: "High-Assurance AI",
+    selectedRank: 1,
   },
   {
     id: 3,
@@ -182,6 +187,8 @@ export const PUBLICATIONS = [
     image: publicationImage("healtheqkg.png"),
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "paper-conference",
+    researchFocus: "Knowledge Graphs",
+    selectedRank: 3,
   },
   {
     id: 4,
@@ -197,6 +204,8 @@ export const PUBLICATIONS = [
     ],
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "article-journal",
+    researchFocus: "Healthcare AI",
+    selectedRank: 6,
   },
   {
     id: 5,
@@ -208,6 +217,8 @@ export const PUBLICATIONS = [
     image: publicationImage("balancing.png"),
     tags: ["Entity Resolution", "Data Integration", "Large Language Models"],
     publicationType: "paper-conference",
+    researchFocus: "Data Integration",
+    selectedRank: 4,
   },
   {
     id: 6,
@@ -219,6 +230,7 @@ export const PUBLICATIONS = [
     image: publicationImage("What-if-red.png"),
     tags: ["Entity Resolution", "Data Integration", "Large Language Models"],
     publicationType: "paper-conference",
+    researchFocus: "Generative AI",
   },
   {
     id: 7,
@@ -230,6 +242,7 @@ export const PUBLICATIONS = [
     image: publicationImage("DA.png"),
     tags: ["Computer Vision", "AI in Healthcare"],
     publicationType: "article-journal",
+    researchFocus: "Healthcare AI",
   },
   {
     id: 8,
@@ -241,6 +254,7 @@ export const PUBLICATIONS = [
     image: publicationImage("prompt-engineering.png"),
     tags: ["Entity Resolution", "Data Integration", "Large Language Models"],
     publicationType: "article-journal",
+    researchFocus: "Data Integration",
   },
   {
     id: 9,
@@ -252,6 +266,7 @@ export const PUBLICATIONS = [
     image: publicationImage("all-of-us-v3.png"),
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "article-journal",
+    researchFocus: "Healthcare AI",
   },
   {
     id: 10,
@@ -263,6 +278,8 @@ export const PUBLICATIONS = [
     image: publicationImage("HALO-data-process.png"),
     tags: ["Large Language Models", "Trustworthy AI"],
     publicationType: "paper-conference",
+    researchFocus: "High-Assurance AI",
+    selectedRank: 5,
   },
   {
     id: 11,
@@ -274,6 +291,7 @@ export const PUBLICATIONS = [
     image: publicationImage("ISAC-demo-v4.png"),
     tags: ["Graph Analytics", "HCI"],
     publicationType: "paper-conference",
+    researchFocus: "Graph Analytics",
   },
   {
     id: 12,
@@ -285,6 +303,7 @@ export const PUBLICATIONS = [
     image: publicationImage("PMC.png"),
     tags: ["Large Language Models"],
     publicationType: "article-journal",
+    researchFocus: "Large Language Models",
   },
 ];
 
