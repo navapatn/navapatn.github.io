@@ -9,6 +9,7 @@ import {
   PROFILE_IMAGE,
   SOCIAL_LINKS,
 } from "../../Util/data";
+import { trackOutboundLink } from "../../Util/analytics";
 
 const ICON_MAP = {
   email: FaEnvelope,
@@ -34,7 +35,13 @@ const Landing = () => {
             <div className="email-texts">
               {emailLinks.map((social, index) => (
                 <React.Fragment key={social.link}>
-                  <a href={social.link} rel="noopener noreferrer" target="_blank" aria-label={social.name}>
+                  <a
+                    href={social.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label={social.name}
+                    onClick={() => trackOutboundLink(social.name, social.link, "profile")}
+                  >
                     <span className="email-text">{social.text}</span>
                   </a>
                   {index < emailLinks.length - 1 && <span className="email-separator">,&nbsp;</span>}
@@ -53,6 +60,7 @@ const Landing = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label={social.name}
+                  onClick={() => trackOutboundLink(social.name, social.link, "profile")}
                 >
                   {Icon ? <Icon className="contact-icon" aria-hidden="true" /> : null}
                 </a>

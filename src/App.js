@@ -8,6 +8,7 @@ import { keepTheme } from './Util/themes';
 import Toggle from './components/Toggle/Toggle';
 import CustomCursor from './components/CustomCursor/CustomCursor';
 import LoadingAnimation from './components/LoadingAnimation/LoadingAnimation';
+import CookieConsent from './components/CookieConsent/CookieConsent';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -31,6 +32,7 @@ function App() {
         <Container />
         <Footer />
         <ScrollButton />
+        <CookieConsent />
       </div>
       <CustomCursor />
     </div>

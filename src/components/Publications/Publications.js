@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Publications.css";
 import { PUBLICATIONS, RESEARCH_INTERESTS } from "../../Util/data";
+import { trackOutboundLink } from "../../Util/analytics";
 
 const formatDate = (dateString) => {
   const options = { year: "numeric", month: "short" };
@@ -151,7 +152,13 @@ const Publications = () => {
             )}
             <div className="publication-content">
               {pub.link ? (
-                <a href={pub.link} rel="noopener noreferrer" target="_blank" className="publication-title-link">
+                <a
+                  href={pub.link}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="publication-title-link"
+                  onClick={() => trackOutboundLink(pub.name, pub.link, "publication")}
+                >
                   <h2>{pub.name}</h2>
                 </a>
               ) : (
@@ -171,23 +178,48 @@ const Publications = () => {
               )}
               <div className="publication-links">
                 {pub.link && (
-                  <a href={pub.link} rel="noopener noreferrer" target="_blank">
+                  <a
+                    href={pub.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label={`Read ${pub.name}`}
+                    onClick={() => trackOutboundLink(pub.name, pub.link, "publication")}
+                  >
                     <i className="fas fa-file-alt"></i>
                   </a>
                 )}
                 {pub.extraLinks &&
                   pub.extraLinks.map((extraLink) => (
-                    <a key={extraLink.url} href={extraLink.url} rel="noopener noreferrer" target="_blank">
+                    <a
+                      key={extraLink.url}
+                      href={extraLink.url}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      aria-label={`${extraLink.type} for ${pub.name}`}
+                      onClick={() => trackOutboundLink(pub.name, extraLink.url, "publication")}
+                    >
                       <i className={extraLinkIcon[extraLink.type] || "fas fa-link"}></i>
                     </a>
                   ))}
                 {pub.code && (
-                  <a href={pub.code} rel="noopener noreferrer" target="_blank">
+                  <a
+                    href={pub.code}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label={`Code for ${pub.name}`}
+                    onClick={() => trackOutboundLink(pub.name, pub.code, "publication-code")}
+                  >
                     <i className="fas fa-code"></i>
                   </a>
                 )}
                 {pub.projectPage && (
-                  <a href={pub.projectPage} rel="noopener noreferrer" target="_blank">
+                  <a
+                    href={pub.projectPage}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label={`Project page for ${pub.name}`}
+                    onClick={() => trackOutboundLink(pub.name, pub.projectPage, "publication-project")}
+                  >
                     <i className="fas fa-globe"></i>
                   </a>
                 )}
