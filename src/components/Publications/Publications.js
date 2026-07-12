@@ -11,7 +11,7 @@ const GROUP_BY_OPTIONS = [
 ];
 
 const FOCUS_ORDER = [
-  "High-Stakes AI",
+  "AI in High-Assurance Domains",
   "AI Reasoning",
   "Knowledge Graphs & Networks",
   "Entity Resolution",
@@ -27,7 +27,7 @@ const TYPE_OPTIONS = [
 const GROUP_ICONS = {
   selected: "fas fa-star",
   all: "fas fa-list",
-  "High-Stakes AI": "fas fa-shield-alt",
+  "AI in High-Assurance Domains": "fas fa-shield-alt",
   "AI Reasoning": "fas fa-brain",
   "Knowledge Graphs & Networks": "fas fa-project-diagram",
   "Entity Resolution": "fas fa-code-branch",
@@ -82,7 +82,7 @@ const getGroups = (groupBy) => {
       value: focus,
       label: focus,
       icon: GROUP_ICONS[focus],
-      papers: PUBLICATIONS.filter((paper) => paper.researchFocus === focus),
+      papers: PUBLICATIONS.filter((paper) => (paper.researchFocuses || []).includes(focus)),
     })).filter((group) => group.papers.length > 0);
   }
 
@@ -107,10 +107,15 @@ const Publications = () => {
   const [groupBy, setGroupBy] = useState("selected");
   const [activeGroup, setActiveGroup] = useState("selected");
   const [isGroupMenuOpen, setIsGroupMenuOpen] = useState(false);
-  const groups = getGroups(groupBy);
-  const selectedGroup = groups.find((group) => group.value === activeGroup) || groups[0];
-  const papers = sortResearch(selectedGroup.papers, groupBy, selectedGroup.value);
-  const activeGrouping = GROUP_BY_OPTIONS.find((option) => option.value === groupBy);
+  const [previewGroupBy, setPreviewGroupBy] = useState(null);
+  const displayedGroupBy = previewGroupBy || groupBy;
+  const groups = getGroups(displayedGroupBy);
+  const selectedGroup =
+    displayedGroupBy === groupBy
+      ? groups.find((group) => group.value === activeGroup) || groups[0]
+      : groups[0];
+  const papers = sortResearch(selectedGroup.papers, displayedGroupBy, selectedGroup.value);
+  const activeGrouping = GROUP_BY_OPTIONS.find((option) => option.value === displayedGroupBy);
 
   const changeGrouping = (nextGrouping) => {
     const nextGroups = getGroups(nextGrouping);
@@ -118,6 +123,7 @@ const Publications = () => {
     setGroupBy(nextGrouping);
     setActiveGroup(nextGroups[0].value);
     setIsGroupMenuOpen(false);
+    setPreviewGroupBy(null);
   };
 
   return (
@@ -130,18 +136,27 @@ const Publications = () => {
           className="research-group-trigger"
           aria-expanded={isGroupMenuOpen}
           aria-controls="research-group-options"
-          onClick={() => setIsGroupMenuOpen((isOpen) => !isOpen)}
+          onClick={() => {
+            setIsGroupMenuOpen((isOpen) => !isOpen);
+            setPreviewGroupBy(null);
+          }}
         >
           <span>{activeGrouping.label}</span>
           <i className={`fas fa-chevron-${isGroupMenuOpen ? "left" : "right"}`} aria-hidden="true" />
         </button>
-        <div id="research-group-options" className="research-group-options">
+        <div
+          id="research-group-options"
+          className="research-group-options"
+          onMouseLeave={() => setPreviewGroupBy(null)}
+        >
           {GROUP_BY_OPTIONS.filter((option) => option.value !== groupBy).map((option) => (
             <button
               key={option.value}
               type="button"
               className={option.value === groupBy ? "is-active" : ""}
               onClick={() => changeGrouping(option.value)}
+              onMouseEnter={() => setPreviewGroupBy(option.value)}
+              onFocus={() => setPreviewGroupBy(option.value)}
             >
               {option.label}
             </button>
@@ -149,7 +164,7 @@ const Publications = () => {
         </div>
       </div>
 
-      <div className="research-tabs" role="tablist" aria-label={`Research grouped by ${groupBy}`}>
+      <div className="research-tabs" role="tablist" aria-label={`Research grouped by ${displayedGroupBy}`}>
         {groups.map((group) => (
           <button
             key={group.value}
@@ -157,7 +172,9 @@ const Publications = () => {
             role="tab"
             aria-selected={selectedGroup.value === group.value}
             className={`research-tab ${selectedGroup.value === group.value ? "is-active" : ""}`}
-            onClick={() => setActiveGroup(group.value)}
+            onClick={() => {
+              if (!previewGroupBy) setActiveGroup(group.value);
+            }}
           >
             <i className={group.icon} aria-hidden="true" />
             <span>{group.label}</span>
@@ -166,7 +183,7 @@ const Publications = () => {
         ))}
       </div>
 
-      {groupBy === "selected" && selectedGroup.value === "selected" ? (
+      {displayedGroupBy === "selected" && selectedGroup.value === "selected" ? (
         <p className="research-intro">
           A focused set of projects spanning high-assurance LLM reasoning, knowledge graphs, data integration, and healthcare AI.
         </p>

@@ -149,7 +149,7 @@ export const PUBLICATIONS = [
     image: publicationImage("clinicbot.png"),
     tags: ["AI in Healthcare", "Large Language Models"],
     publicationType: "paper-conference",
-    researchFocus: "High-Stakes AI",
+    researchFocuses: ["AI in High-Assurance Domains", "AI Reasoning"],
     selectedRank: 2,
   },
   {
@@ -162,7 +162,7 @@ export const PUBLICATIONS = [
     image: publicationImage("ICDH-collaboration-network.png"),
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "article",
-    researchFocus: "Computational Social Science",
+    researchFocuses: ["Computational Social Science"],
   },
   {
     id: 2,
@@ -174,7 +174,7 @@ export const PUBLICATIONS = [
     image: publicationImage("ICML-approach-4.png"),
     tags: ["Neurosymbolic AI", "Large Language Models", "Trustworthy AI"],
     publicationType: "article",
-    researchFocus: "High-Stakes AI",
+    researchFocuses: ["AI in High-Assurance Domains", "AI Reasoning", "Knowledge Graphs & Networks"],
     selectedRank: 1,
   },
   {
@@ -187,7 +187,7 @@ export const PUBLICATIONS = [
     image: publicationImage("healtheqkg.png"),
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "paper-conference",
-    researchFocus: "Knowledge Graphs & Networks",
+    researchFocuses: ["Knowledge Graphs & Networks", "Computational Social Science"],
     selectedRank: 3,
   },
   {
@@ -204,7 +204,7 @@ export const PUBLICATIONS = [
     ],
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "article-journal",
-    researchFocus: "Computational Social Science",
+    researchFocuses: ["Computational Social Science"],
     selectedRank: 6,
   },
   {
@@ -217,7 +217,7 @@ export const PUBLICATIONS = [
     image: publicationImage("balancing.png"),
     tags: ["Entity Resolution", "Data Integration", "Large Language Models"],
     publicationType: "paper-conference",
-    researchFocus: "Entity Resolution",
+    researchFocuses: ["Entity Resolution", "AI Reasoning"],
     selectedRank: 4,
   },
   {
@@ -230,7 +230,7 @@ export const PUBLICATIONS = [
     image: publicationImage("What-if-red.png"),
     tags: ["Entity Resolution", "Data Integration", "Large Language Models"],
     publicationType: "paper-conference",
-    researchFocus: "AI Reasoning",
+    researchFocuses: ["AI Reasoning"],
   },
   {
     id: 7,
@@ -242,7 +242,7 @@ export const PUBLICATIONS = [
     image: publicationImage("DA.png"),
     tags: ["Computer Vision", "AI in Healthcare"],
     publicationType: "article-journal",
-    researchFocus: "High-Stakes AI",
+    researchFocuses: ["AI in High-Assurance Domains"],
   },
   {
     id: 8,
@@ -254,7 +254,7 @@ export const PUBLICATIONS = [
     image: publicationImage("prompt-engineering.png"),
     tags: ["Entity Resolution", "Data Integration", "Large Language Models"],
     publicationType: "article-journal",
-    researchFocus: "Entity Resolution",
+    researchFocuses: ["Entity Resolution", "AI Reasoning"],
   },
   {
     id: 9,
@@ -266,7 +266,7 @@ export const PUBLICATIONS = [
     image: publicationImage("all-of-us-v3.png"),
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "article-journal",
-    researchFocus: "Computational Social Science",
+    researchFocuses: ["Computational Social Science"],
   },
   {
     id: 10,
@@ -278,7 +278,7 @@ export const PUBLICATIONS = [
     image: publicationImage("HALO-data-process.png"),
     tags: ["Large Language Models", "Trustworthy AI"],
     publicationType: "paper-conference",
-    researchFocus: "High-Stakes AI",
+    researchFocuses: ["AI in High-Assurance Domains", "Knowledge Graphs & Networks"],
     selectedRank: 5,
   },
   {
@@ -291,7 +291,7 @@ export const PUBLICATIONS = [
     image: publicationImage("ISAC-demo-v4.png"),
     tags: ["Graph Analytics", "HCI"],
     publicationType: "paper-conference",
-    researchFocus: "Knowledge Graphs & Networks",
+    researchFocuses: ["Knowledge Graphs & Networks"],
   },
   {
     id: 12,
@@ -303,7 +303,7 @@ export const PUBLICATIONS = [
     image: publicationImage("PMC.png"),
     tags: ["Large Language Models"],
     publicationType: "article-journal",
-    researchFocus: "AI Reasoning",
+    researchFocuses: ["AI Reasoning"],
   },
 ];
 
