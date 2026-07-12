@@ -150,6 +150,8 @@ export const PUBLICATIONS = [
     tags: ["AI in Healthcare", "Large Language Models"],
     publicationType: "paper-conference",
     researchFocuses: ["AI in High-Assurance Domains", "AI Reasoning"],
+    domains: ["Healthcare & Health Equity", "Trustworthy AI"],
+    contributions: ["Modeling & Reasoning"],
     selectedRank: 2,
   },
   {
@@ -163,6 +165,8 @@ export const PUBLICATIONS = [
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "article",
     researchFocuses: ["Computational Social Science"],
+    domains: ["Scientific Research", "Healthcare & Health Equity", "Knowledge & Network Systems"],
+    contributions: ["Empirical Analysis"],
   },
   {
     id: 2,
@@ -175,6 +179,8 @@ export const PUBLICATIONS = [
     tags: ["Neurosymbolic AI", "Large Language Models", "Trustworthy AI"],
     publicationType: "article",
     researchFocuses: ["AI in High-Assurance Domains", "AI Reasoning", "Knowledge Graphs & Networks"],
+    domains: ["Trustworthy AI", "Language & Commonsense", "Knowledge & Network Systems"],
+    contributions: ["Modeling & Reasoning", "Knowledge Representation"],
     selectedRank: 1,
   },
   {
@@ -188,6 +194,8 @@ export const PUBLICATIONS = [
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "paper-conference",
     researchFocuses: ["Knowledge Graphs & Networks", "Computational Social Science"],
+    domains: ["Healthcare & Health Equity", "Scientific Research", "Knowledge & Network Systems"],
+    contributions: ["Knowledge Representation", "Data Resources & Tools"],
     selectedRank: 3,
   },
   {
@@ -205,6 +213,8 @@ export const PUBLICATIONS = [
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "article-journal",
     researchFocuses: ["Computational Social Science"],
+    domains: ["Healthcare & Health Equity"],
+    contributions: ["Empirical Analysis"],
     selectedRank: 6,
   },
   {
@@ -218,6 +228,8 @@ export const PUBLICATIONS = [
     tags: ["Entity Resolution", "Data Integration", "Large Language Models"],
     publicationType: "paper-conference",
     researchFocuses: ["Entity Resolution", "AI Reasoning"],
+    domains: ["Data Integration & Commerce"],
+    contributions: ["Data Integration"],
     selectedRank: 4,
   },
   {
@@ -231,6 +243,8 @@ export const PUBLICATIONS = [
     tags: ["Entity Resolution", "Data Integration", "Large Language Models"],
     publicationType: "paper-conference",
     researchFocuses: ["AI Reasoning"],
+    domains: ["Language & Commonsense"],
+    contributions: ["Modeling & Reasoning"],
   },
   {
     id: 7,
@@ -243,6 +257,8 @@ export const PUBLICATIONS = [
     tags: ["Computer Vision", "AI in Healthcare"],
     publicationType: "article-journal",
     researchFocuses: ["AI in High-Assurance Domains"],
+    domains: ["Healthcare & Health Equity"],
+    contributions: ["Modeling & Reasoning", "Data Integration"],
   },
   {
     id: 8,
@@ -255,6 +271,8 @@ export const PUBLICATIONS = [
     tags: ["Entity Resolution", "Data Integration", "Large Language Models"],
     publicationType: "article-journal",
     researchFocuses: ["Entity Resolution", "AI Reasoning"],
+    domains: ["Data Integration & Commerce"],
+    contributions: ["Data Integration"],
   },
   {
     id: 9,
@@ -267,6 +285,8 @@ export const PUBLICATIONS = [
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "article-journal",
     researchFocuses: ["Computational Social Science"],
+    domains: ["Healthcare & Health Equity", "Scientific Research"],
+    contributions: ["Empirical Analysis"],
   },
   {
     id: 10,
@@ -279,6 +299,8 @@ export const PUBLICATIONS = [
     tags: ["Large Language Models", "Trustworthy AI"],
     publicationType: "paper-conference",
     researchFocuses: ["AI in High-Assurance Domains", "Knowledge Graphs & Networks"],
+    domains: ["Trustworthy AI", "Knowledge & Network Systems"],
+    contributions: ["Knowledge Representation", "Data Resources & Tools"],
     selectedRank: 5,
   },
   {
@@ -292,6 +314,8 @@ export const PUBLICATIONS = [
     tags: ["Graph Analytics", "HCI"],
     publicationType: "paper-conference",
     researchFocuses: ["Knowledge Graphs & Networks"],
+    domains: ["Knowledge & Network Systems"],
+    contributions: ["Data Resources & Tools"],
   },
   {
     id: 12,
@@ -304,6 +328,8 @@ export const PUBLICATIONS = [
     tags: ["Large Language Models"],
     publicationType: "article-journal",
     researchFocuses: ["AI Reasoning"],
+    domains: ["Language & Commonsense"],
+    contributions: ["Data Resources & Tools"],
   },
 ];
 

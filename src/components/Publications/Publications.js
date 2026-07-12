@@ -5,9 +5,10 @@ import { trackOutboundLink } from "../../Util/analytics";
 
 const GROUP_BY_OPTIONS = [
   { value: "selected", label: "Selected" },
-  { value: "focus", label: "Research Focus" },
   { value: "type", label: "Publication Type" },
-  { value: "year", label: "Year" },
+  { value: "focus", label: "Research Focus" },
+  { value: "domain", label: "Domain" },
+  { value: "contribution", label: "Contribution" },
 ];
 
 const FOCUS_ORDER = [
@@ -24,6 +25,23 @@ const TYPE_OPTIONS = [
   { value: "article", label: "Preprints", icon: "fas fa-file-alt" },
 ];
 
+const DOMAIN_OPTIONS = [
+  { value: "Healthcare & Health Equity", icon: "fas fa-heartbeat" },
+  { value: "Scientific Research", icon: "fas fa-flask" },
+  { value: "Data Integration & Commerce", icon: "fas fa-exchange-alt" },
+  { value: "Language & Commonsense", icon: "fas fa-comments" },
+  { value: "Trustworthy AI", icon: "fas fa-shield-alt" },
+  { value: "Knowledge & Network Systems", icon: "fas fa-project-diagram" },
+];
+
+const CONTRIBUTION_OPTIONS = [
+  { value: "Modeling & Reasoning", icon: "fas fa-brain" },
+  { value: "Knowledge Representation", icon: "fas fa-sitemap" },
+  { value: "Data Integration", icon: "fas fa-code-branch" },
+  { value: "Empirical Analysis", icon: "fas fa-chart-line" },
+  { value: "Data Resources & Tools", icon: "fas fa-toolbox" },
+];
+
 const GROUP_ICONS = {
   selected: "fas fa-star",
   all: "fas fa-list",
@@ -32,6 +50,17 @@ const GROUP_ICONS = {
   "Knowledge Graphs & Networks": "fas fa-project-diagram",
   "Entity Resolution": "fas fa-code-branch",
   "Computational Social Science": "fas fa-chart-line",
+  "Healthcare & Health Equity": "fas fa-heartbeat",
+  "Scientific Research": "fas fa-flask",
+  "Data Integration & Commerce": "fas fa-exchange-alt",
+  "Language & Commonsense": "fas fa-comments",
+  "Trustworthy AI": "fas fa-shield-alt",
+  "Knowledge & Network Systems": "fas fa-project-diagram",
+  "Modeling & Reasoning": "fas fa-brain",
+  "Knowledge Representation": "fas fa-sitemap",
+  "Data Integration": "fas fa-code-branch",
+  "Empirical Analysis": "fas fa-chart-line",
+  "Data Resources & Tools": "fas fa-toolbox",
 };
 
 const extraLinkLabels = {
@@ -93,14 +122,19 @@ const getGroups = (groupBy) => {
     })).filter((group) => group.papers.length > 0);
   }
 
-  return Array.from(new Set(PUBLICATIONS.map((paper) => new Date(paper.date).getFullYear())))
-    .sort((left, right) => right - left)
-    .map((year) => ({
-      value: String(year),
-      label: String(year),
-      icon: "fas fa-calendar-alt",
-      papers: PUBLICATIONS.filter((paper) => new Date(paper.date).getFullYear() === year),
-    }));
+  if (groupBy === "domain") {
+    return DOMAIN_OPTIONS.map((domain) => ({
+      ...domain,
+      label: domain.value,
+      papers: PUBLICATIONS.filter((paper) => (paper.domains || []).includes(domain.value)),
+    })).filter((group) => group.papers.length > 0);
+  }
+
+  return CONTRIBUTION_OPTIONS.map((contribution) => ({
+    ...contribution,
+    label: contribution.value,
+    papers: PUBLICATIONS.filter((paper) => (paper.contributions || []).includes(contribution.value)),
+  })).filter((group) => group.papers.length > 0);
 };
 
 const Publications = () => {
