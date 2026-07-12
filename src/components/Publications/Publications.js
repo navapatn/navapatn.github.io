@@ -110,30 +110,47 @@ const getGroups = (groupBy) => {
 const Publications = () => {
   const [groupBy, setGroupBy] = useState("selected");
   const [activeGroup, setActiveGroup] = useState("selected");
+  const [isGroupMenuOpen, setIsGroupMenuOpen] = useState(false);
   const groups = getGroups(groupBy);
   const selectedGroup = groups.find((group) => group.value === activeGroup) || groups[0];
   const papers = sortResearch(selectedGroup.papers, groupBy, selectedGroup.value);
+  const activeGrouping = GROUP_BY_OPTIONS.find((option) => option.value === groupBy);
 
-  const changeGrouping = (event) => {
-    const nextGrouping = event.target.value;
+  const changeGrouping = (nextGrouping) => {
     const nextGroups = getGroups(nextGrouping);
 
     setGroupBy(nextGrouping);
     setActiveGroup(nextGroups[0].value);
+    setIsGroupMenuOpen(false);
   };
 
   return (
     <section id="publications" aria-labelledby="research-heading">
       <h1 id="research-heading">Research</h1>
-      <div className="research-grouping">
-        <label htmlFor="research-group-by">Group by</label>
-        <select id="research-group-by" value={groupBy} onChange={changeGrouping}>
-          {GROUP_BY_OPTIONS.map((option) => (
-            <option key={option.value} value={option.value}>
+      <div className={`research-grouping ${isGroupMenuOpen ? "is-open" : ""}`}>
+        <span className="research-group-label">Group by</span>
+        <button
+          type="button"
+          className="research-group-trigger"
+          aria-expanded={isGroupMenuOpen}
+          aria-controls="research-group-options"
+          onClick={() => setIsGroupMenuOpen((isOpen) => !isOpen)}
+        >
+          <span>{activeGrouping.label}</span>
+          <i className={`fas fa-chevron-${isGroupMenuOpen ? "left" : "right"}`} aria-hidden="true" />
+        </button>
+        <div id="research-group-options" className="research-group-options">
+          {GROUP_BY_OPTIONS.filter((option) => option.value !== groupBy).map((option) => (
+            <button
+              key={option.value}
+              type="button"
+              className={option.value === groupBy ? "is-active" : ""}
+              onClick={() => changeGrouping(option.value)}
+            >
               {option.label}
-            </option>
+            </button>
           ))}
-        </select>
+        </div>
       </div>
 
       <div className="research-tabs" role="tablist" aria-label={`Research grouped by ${groupBy}`}>
@@ -180,36 +197,47 @@ const Publications = () => {
 
           return (
             <article key={paper.id} className="research-entry">
-              {paper.link ? (
-                <a
-                  className="research-title-link"
-                  href={paper.link}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  onClick={() => trackOutboundLink(paper.name, paper.link, "research-paper")}
-                >
+              <div className="research-image-wrap">
+                {paper.image ? (
+                  <img src={paper.image} alt={paper.name} className="research-image" />
+                ) : (
+                  <div className="research-image-fallback" aria-hidden="true">
+                    {new Date(paper.date).getFullYear()}
+                  </div>
+                )}
+              </div>
+              <div className="research-entry-content">
+                {paper.link ? (
+                  <a
+                    className="research-title-link"
+                    href={paper.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    onClick={() => trackOutboundLink(paper.name, paper.link, "research-paper")}
+                  >
+                    <h2>{paper.name}</h2>
+                  </a>
+                ) : (
                   <h2>{paper.name}</h2>
-                </a>
-              ) : (
-                <h2>{paper.name}</h2>
-              )}
-              <p className="research-authors">{formatAuthors(paper.authors)}</p>
-              <p className="research-venue">{paper.journal}</p>
-              <div className="research-links" aria-label={`Links for ${paper.name}`}>
-                {links.map((link, index) => (
-                  <React.Fragment key={link.url}>
-                    <a
-                      href={link.url}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      onClick={() => trackOutboundLink(paper.name, link.url, link.category)}
-                    >
-                      <i className={link.icon} aria-hidden="true" />
-                      {link.label}
-                    </a>
-                    {index < links.length - 1 ? <span aria-hidden="true">/</span> : null}
-                  </React.Fragment>
-                ))}
+                )}
+                <p className="research-authors">{formatAuthors(paper.authors)}</p>
+                <p className="research-venue">{paper.journal}</p>
+                <div className="research-links" aria-label={`Links for ${paper.name}`}>
+                  {links.map((link, index) => (
+                    <React.Fragment key={link.url}>
+                      <a
+                        href={link.url}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        onClick={() => trackOutboundLink(paper.name, link.url, link.category)}
+                      >
+                        <i className={link.icon} aria-hidden="true" />
+                        {link.label}
+                      </a>
+                      {index < links.length - 1 ? <span aria-hidden="true">/</span> : null}
+                    </React.Fragment>
+                  ))}
+                </div>
               </div>
             </article>
           );

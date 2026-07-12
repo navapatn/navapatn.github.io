@@ -7,11 +7,12 @@
 .research-grouping {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  min-height: 2.8rem;
+  gap: 0.65rem;
   margin: 0 0 1.55rem;
 }
 
-.research-grouping label {
+.research-group-label {
   color: var(--second-color);
   font-size: 0.92rem;
   font-weight: 700;
@@ -19,16 +20,70 @@
   text-transform: uppercase;
 }
 
-.research-grouping select {
-  min-width: 10.5rem;
+.research-group-trigger,
+.research-group-options button {
   border: 1px solid var(--border-color);
   border-radius: 0.55rem;
   background: var(--card-color);
   color: var(--card-text);
-  padding: 0.65rem 2.25rem 0.65rem 0.85rem;
   font: inherit;
   font-weight: 700;
   cursor: pointer;
+  box-shadow: 0 2px 5px rgba(22, 36, 45, 0.06);
+}
+
+.research-group-trigger {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 10.5rem;
+  gap: 1.2rem;
+  padding: 0.65rem 0.85rem;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.research-group-trigger:hover,
+.research-grouping.is-open .research-group-trigger {
+  border-color: var(--card-hover-border);
+  box-shadow: var(--card-hover-shadow);
+  background: var(--card-hover-bg);
+}
+
+.research-group-options {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-0.85rem);
+  visibility: hidden;
+  white-space: nowrap;
+  transition: max-width 320ms ease, opacity 180ms ease, transform 320ms ease, visibility 0s linear 320ms;
+}
+
+.research-grouping.is-open .research-group-options {
+  max-width: 42rem;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+  visibility: visible;
+  transition: max-width 320ms ease, opacity 180ms ease 80ms, transform 320ms ease, visibility 0s;
+}
+
+.research-group-options button {
+  flex: 0 0 auto;
+  padding: 0.65rem 0.85rem;
+  color: var(--second-color);
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.research-group-options button:hover {
+  border-color: var(--card-hover-border);
+  color: var(--first-color);
+  background: var(--card-hover-bg);
 }
 
 .research-tabs {
@@ -87,10 +142,12 @@
 }
 
 .research-entry {
+  display: grid;
+  grid-template-columns: minmax(220px, 29%) minmax(0, 1fr);
   border: 1px solid var(--border-color);
   background: var(--card-color);
   color: var(--card-text);
-  padding: 1.4rem 1.6rem 1.3rem;
+  overflow: hidden;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease,
     background-color 180ms ease;
 }
@@ -106,6 +163,48 @@
   display: inline;
   color: inherit;
   text-decoration: none;
+}
+
+.research-image-wrap {
+  min-height: 188px;
+  border-right: 1px solid var(--border-color);
+  background: #ffffff;
+}
+
+.research-image,
+.research-image-fallback {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 188px;
+}
+
+.research-image {
+  object-fit: contain;
+  padding: 0.5rem 0.65rem;
+  transition: transform 220ms ease;
+}
+
+.research-entry:hover .research-image {
+  transform: scale(1.025);
+}
+
+.research-image-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(94, 139, 140, 0.14), rgba(215, 194, 163, 0.28));
+  color: var(--card-text);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.research-entry-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.35rem 1.6rem 1.25rem;
 }
 
 .research-entry h2 {
@@ -170,8 +269,23 @@
     gap: 0.55rem;
   }
 
-  .research-grouping select {
+  .research-group-trigger {
     width: 100%;
+  }
+
+  .research-group-options {
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 0;
+    max-width: 100%;
+    transform: translateY(-0.5rem);
+    transition: max-height 320ms ease, opacity 180ms ease, transform 320ms ease, visibility 0s linear 320ms;
+  }
+
+  .research-grouping.is-open .research-group-options {
+    max-height: 8rem;
+    transform: translateY(0);
+    transition: max-height 320ms ease, opacity 180ms ease 80ms, transform 320ms ease, visibility 0s;
   }
 
   .research-tabs {
@@ -183,6 +297,21 @@
   }
 
   .research-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .research-image-wrap {
+    min-height: 180px;
+    border-right: 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .research-image,
+  .research-image-fallback {
+    min-height: 180px;
+  }
+
+  .research-entry-content {
     padding: 1.15rem;
   }
 
@@ -198,11 +327,19 @@
 
 @media (prefers-reduced-motion: reduce) {
   .research-entry,
-  .research-tab {
+  .research-tab,
+  .research-group-trigger,
+  .research-group-options,
+  .research-group-options button,
+  .research-image {
     transition: none;
   }
 
   .research-entry:hover {
+    transform: none;
+  }
+
+  .research-entry:hover .research-image {
     transform: none;
   }
 }
