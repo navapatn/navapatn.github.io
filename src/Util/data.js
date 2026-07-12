@@ -213,7 +213,7 @@ export const PUBLICATIONS = [
     tags: ["AI in Healthcare", "Computational Social Science"],
     publicationType: "article-journal",
     researchFocuses: ["Computational Social Science"],
-    domains: ["AI in Healthcare"],
+    domains: ["AI in Healthcare", "Network Science"],
     contributions: ["Evaluation"],
     selectedRank: 6,
   },
