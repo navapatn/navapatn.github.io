@@ -151,7 +151,7 @@ export const PUBLICATIONS = [
     publicationType: "paper-conference",
     researchFocuses: ["AI in High-Assurance Domains", "AI Reasoning"],
     domains: ["AI in Healthcare", "Large Language Models"],
-    contributions: ["Modeling", "System"],
+    contributions: ["Modeling", "Agentic System"],
     selectedRank: 2,
   },
   {
@@ -195,7 +195,7 @@ export const PUBLICATIONS = [
     publicationType: "paper-conference",
     researchFocuses: ["Knowledge Graphs & Networks", "Computational Social Science"],
     domains: ["AI in Healthcare", "Knowledge Graphs"],
-    contributions: ["Dataset", "System"],
+    contributions: ["Dataset", "Agentic System"],
     selectedRank: 3,
   },
   {
@@ -315,7 +315,7 @@ export const PUBLICATIONS = [
     publicationType: "paper-conference",
     researchFocuses: ["Knowledge Graphs & Networks"],
     domains: ["Network Science"],
-    contributions: ["System"],
+    contributions: ["Agentic System"],
   },
   {
     id: 12,

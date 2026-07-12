@@ -37,7 +37,7 @@ const CONTRIBUTION_OPTIONS = [
   { value: "Modeling", icon: "fas fa-brain" },
   { value: "Evaluation", icon: "fas fa-chart-line" },
   { value: "Dataset", icon: "fas fa-database" },
-  { value: "System", icon: "fas fa-cogs" },
+  { value: "Agentic System", icon: "fas fa-cogs" },
 ];
 
 const GROUP_ICONS = {
@@ -55,7 +55,7 @@ const GROUP_ICONS = {
   Modeling: "fas fa-brain",
   Evaluation: "fas fa-chart-line",
   Dataset: "fas fa-database",
-  System: "fas fa-cogs",
+  "Agentic System": "fas fa-cogs",
 };
 
 const extraLinkLabels = {
