@@ -11,13 +11,11 @@ const GROUP_BY_OPTIONS = [
 ];
 
 const FOCUS_ORDER = [
-  "High-Assurance AI",
-  "Healthcare AI",
-  "Knowledge Graphs",
-  "Data Integration",
-  "Large Language Models",
-  "Generative AI",
-  "Graph Analytics",
+  "High-Stakes AI",
+  "AI Reasoning",
+  "Knowledge Graphs & Networks",
+  "Entity Resolution",
+  "Computational Social Science",
 ];
 
 const TYPE_OPTIONS = [
@@ -29,13 +27,11 @@ const TYPE_OPTIONS = [
 const GROUP_ICONS = {
   selected: "fas fa-star",
   all: "fas fa-list",
-  "High-Assurance AI": "fas fa-shield-alt",
-  "Healthcare AI": "fas fa-heartbeat",
-  "Knowledge Graphs": "fas fa-project-diagram",
-  "Data Integration": "fas fa-code-branch",
-  "Large Language Models": "fas fa-robot",
-  "Generative AI": "fas fa-magic",
-  "Graph Analytics": "fas fa-chart-line",
+  "High-Stakes AI": "fas fa-shield-alt",
+  "AI Reasoning": "fas fa-brain",
+  "Knowledge Graphs & Networks": "fas fa-project-diagram",
+  "Entity Resolution": "fas fa-code-branch",
+  "Computational Social Science": "fas fa-chart-line",
 };
 
 const extraLinkLabels = {
