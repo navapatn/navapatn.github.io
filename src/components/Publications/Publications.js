@@ -26,20 +26,18 @@ const TYPE_OPTIONS = [
 ];
 
 const DOMAIN_OPTIONS = [
-  { value: "Healthcare & Health Equity", icon: "fas fa-heartbeat" },
-  { value: "Scientific Research", icon: "fas fa-flask" },
-  { value: "Data Integration & Commerce", icon: "fas fa-exchange-alt" },
-  { value: "Language & Commonsense", icon: "fas fa-comments" },
-  { value: "Trustworthy AI", icon: "fas fa-shield-alt" },
-  { value: "Knowledge & Network Systems", icon: "fas fa-project-diagram" },
+  { value: "AI in Healthcare", icon: "fas fa-heartbeat" },
+  { value: "Knowledge Graphs", icon: "fas fa-project-diagram" },
+  { value: "Entity Resolution", icon: "fas fa-code-branch" },
+  { value: "Large Language Models", icon: "fas fa-robot" },
+  { value: "Network Science", icon: "fas fa-chart-line" },
 ];
 
 const CONTRIBUTION_OPTIONS = [
-  { value: "Modeling & Reasoning", icon: "fas fa-brain" },
-  { value: "Knowledge Representation", icon: "fas fa-sitemap" },
-  { value: "Data Integration", icon: "fas fa-code-branch" },
-  { value: "Empirical Analysis", icon: "fas fa-chart-line" },
-  { value: "Data Resources & Tools", icon: "fas fa-toolbox" },
+  { value: "Modeling", icon: "fas fa-brain" },
+  { value: "Evaluation", icon: "fas fa-chart-line" },
+  { value: "Dataset", icon: "fas fa-database" },
+  { value: "System", icon: "fas fa-cogs" },
 ];
 
 const GROUP_ICONS = {
@@ -50,17 +48,14 @@ const GROUP_ICONS = {
   "Knowledge Graphs & Networks": "fas fa-project-diagram",
   "Entity Resolution": "fas fa-code-branch",
   "Computational Social Science": "fas fa-chart-line",
-  "Healthcare & Health Equity": "fas fa-heartbeat",
-  "Scientific Research": "fas fa-flask",
-  "Data Integration & Commerce": "fas fa-exchange-alt",
-  "Language & Commonsense": "fas fa-comments",
-  "Trustworthy AI": "fas fa-shield-alt",
-  "Knowledge & Network Systems": "fas fa-project-diagram",
-  "Modeling & Reasoning": "fas fa-brain",
-  "Knowledge Representation": "fas fa-sitemap",
-  "Data Integration": "fas fa-code-branch",
-  "Empirical Analysis": "fas fa-chart-line",
-  "Data Resources & Tools": "fas fa-toolbox",
+  "AI in Healthcare": "fas fa-heartbeat",
+  "Knowledge Graphs": "fas fa-project-diagram",
+  "Large Language Models": "fas fa-robot",
+  "Network Science": "fas fa-chart-line",
+  Modeling: "fas fa-brain",
+  Evaluation: "fas fa-chart-line",
+  Dataset: "fas fa-database",
+  System: "fas fa-cogs",
 };
 
 const extraLinkLabels = {
