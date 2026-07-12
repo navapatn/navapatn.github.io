@@ -142,7 +142,7 @@ const Publications = () => {
           }}
         >
           <span>{activeGrouping.label}</span>
-          <i className={`fas fa-chevron-${isGroupMenuOpen ? "left" : "right"}`} aria-hidden="true" />
+          <span aria-hidden="true">{isGroupMenuOpen ? "<" : ">"}</span>
         </button>
         <div
           id="research-group-options"
@@ -182,12 +182,6 @@ const Publications = () => {
           </button>
         ))}
       </div>
-
-      {displayedGroupBy === "selected" && selectedGroup.value === "selected" ? (
-        <p className="research-intro">
-          A focused set of projects spanning high-assurance LLM reasoning, knowledge graphs, data integration, and healthcare AI.
-        </p>
-      ) : null}
 
       <div className="research-list">
         {papers.map((paper) => {

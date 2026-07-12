@@ -127,14 +127,6 @@
   font-weight: 500;
 }
 
-.research-intro {
-  max-width: 50rem;
-  margin: -0.15rem 0 1.25rem;
-  color: var(--muted-text);
-  font-size: 1rem;
-  line-height: 1.65;
-}
-
 .research-list {
   display: grid;
   gap: 0.95rem;
