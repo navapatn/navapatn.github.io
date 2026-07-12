@@ -115,7 +115,7 @@ const Publications = () => {
       ? groups.find((group) => group.value === activeGroup) || groups[0]
       : groups[0];
   const papers = sortResearch(selectedGroup.papers, displayedGroupBy, selectedGroup.value);
-  const activeGrouping = GROUP_BY_OPTIONS.find((option) => option.value === displayedGroupBy);
+  const activeGrouping = GROUP_BY_OPTIONS.find((option) => option.value === groupBy);
 
   const changeGrouping = (nextGrouping) => {
     const nextGroups = getGroups(nextGrouping);
