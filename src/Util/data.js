@@ -398,12 +398,12 @@ export const EDUCATION = [
 ];
 
 export const ABOUT_TEXT = `
-  <p>I am Navapat (Pat), a Ph.D. student at USC's Information Sciences Institute (ISI), advised by Prof. <a href="https://usc-isi-i2.github.io/kejriwal/" target="_blank" rel="noopener noreferrer">Mayank Kejriwal</a> in the <a href="https://aicomplex.github.io/index.html" target="_blank" rel="noopener noreferrer">Artificial Intelligence and Complex Systems (AICS)</a> Group. I build high-assurance AI systems for domains where errors have real consequences. My research asks how AI can reason accurately, transparently, and accountably when the underlying knowledge is complex and full of exceptions.</p>
-  <p>Working across neurosymbolic AI, large language models, formal logic, and knowledge graphs, I develop methods that ground language models in explicit symbolic reasoning, trace conclusions to authoritative sources, and let people refine the rules that guide them. Through DARPA's <a href="https://www.darpa.mil/research/programs/codord" target="_blank" rel="noopener noreferrer">Human-AI Communication for Deontic Reasoning (CODORD)</a> program, I am developing scalable methods for expressing and reasoning about natural-language obligations, permissions, and prohibitions.</p>
+  <p>I am Navapat (Pat), a Ph.D. student at USC's Information Sciences Institute (ISI), advised by Prof. <a href="https://usc-isi-i2.github.io/kejriwal/" target="_blank" rel="noopener noreferrer">Mayank Kejriwal</a> in the <a href="https://aicomplex.github.io/index.html" target="_blank" rel="noopener noreferrer">Artificial Intelligence and Complex Systems (AICS)</a> Group. I build AI systems for high-assurance domains such as healthcare, law, and public policy. My research question is: how can AI reason accurately, transparently, and accountably when the underlying knowledge is complex and full of exceptions?</p>
+  <p>Working across neurosymbolic AI, large language models, formal logic, and knowledge graphs, I develop methods that improve language-model reasoning with explicit symbolic representations, trace conclusions to authoritative sources, and let people refine the rules that guide them. Through DARPA's <a href="https://www.darpa.mil/research/programs/codord" target="_blank" rel="noopener noreferrer">Human-AI Communication for Deontic Reasoning (CODORD)</a> program, I am developing scalable methods for expressing and reasoning about natural-language obligations, permissions, and prohibitions.</p>
   <p>I focus on three connected directions:</p>
   <ol>
     <li><strong>Rigorously evaluating and verifying</strong> AI systems</li>
-    <li><strong>Grounding AI systems</strong> in formal logic and structured knowledge</li>
-    <li><strong>Building personalized knowledge structures</strong> for adaptive AI systems</li>
+    <li><strong>Improving AI systems</strong> with formal logic and structured knowledge</li>
+    <li><strong>Building personalized knowledge structures</strong> for AI systems</li>
   </ol>
 `;
