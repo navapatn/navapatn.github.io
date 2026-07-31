@@ -30,7 +30,7 @@ nav ul li a {
     padding: 0.5rem 0.1rem;
     text-decoration: none;
     color: var(--second-color);
-    font-size: 0.92rem;
+    font-size: 1rem;
     font-weight: 500;
     white-space: nowrap;
 }
