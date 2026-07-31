@@ -110,7 +110,7 @@ img {
   min-height: 100vh;
   padding-left: 3%;
   padding-right: 3%;
-  overflow: hidden;
+  overflow: clip;
   background: linear-gradient(180deg, var(--gradient-col1), var(--gradient-col2)) fixed;
   background-size: cover;
   animation: fadeIn 0.8s ease-in;
@@ -151,6 +151,7 @@ section {
   width: min(92vw, 1120px);
   padding: 12px 18px;
   margin: 22px auto;
+  scroll-margin-top: 5rem;
 }
 
 h1,
@@ -220,6 +221,7 @@ li {
     width: 92vw;
     padding: 10px 14px;
     margin: 14px auto;
+    scroll-margin-top: 4.5rem;
   }
 
   h1 {

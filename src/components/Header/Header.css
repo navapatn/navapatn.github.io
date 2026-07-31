@@ -1,86 +1,114 @@
-/* ************************************************** */
-/* Header Styling */
-/* ************************************************** */
 header {
     position: sticky;
-    background: transparent;
-    width: min(92vw, 1120px);
-    margin: 20px auto 30px auto; /* Reduced top and bottom margins */
     top: 0;
-    left: 0;
+    z-index: 100;
+    width: 100%;
+    margin: 0 0 24px;
+    background: var(--card-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 8px 24px rgba(23, 50, 71, 0.06);
+    backdrop-filter: blur(14px);
 }
+
+header nav {
+    width: min(92vw, 1120px);
+    margin: 0 auto;
+}
+
 nav ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    min-height: 48px;
 }
 nav ul li {
     list-style-type: none;
     display: inline-block;
     color: var(--second-color);
-    margin: 10px;
+    margin: 0;
 }
 nav ul li a {
+    display: block;
+    padding: 0.7rem 0.15rem;
     text-decoration: none;
     color: var(--second-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+    white-space: nowrap;
 }
 nav ul li a:hover {
     color: var(--first-color);
 }
+
+nav ul li a:focus-visible {
+    outline: 2px solid var(--fourth-color);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
 .menu-icon {
     width: 30px;
     cursor: pointer;
     display: none;
+    margin-left: auto;
 }
 nav #hidden {
     display: flex;
 }
 
 @media only screen and (max-width: 1400px) {
-    header {
+    header nav {
         width: min(94vw, 1080px);
     }
 }
 @media only screen and (max-width: 1048px) {
-    header {
+    header nav {
         width: min(95vw, 960px);
     }
     nav ul li {
-        margin-left: 6px;
-        margin-right: 6px;
-        font-size: 0.96rem;
+        margin: 0;
+    }
+    nav ul {
+        gap: 0.85rem;
     }
 }
 @media only screen and (max-width: 768px) {
     header {
-        width: 100%;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-bottom: 18px;
     }
+
+    header nav {
+        width: 92vw;
+    }
+
     nav ul {
-        right: 0;
-        z-index: 2;
         flex-direction: column;
-        margin-top: 20px;
-        /* position: absolute; */
+        align-items: flex-end;
+        gap: 0.15rem;
+        margin-top: 8px;
+        padding-bottom: 8px;
     }
+
     nav ul li {
-        /* display: block; */
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: auto;
+        margin: 0;
     }
+
+    nav ul li a {
+        padding: 0.4rem 0;
+    }
+
     .menu-icon {
         display: block;
-        margin-left: auto;
+        margin-top: 10px;
     }
+
     .nav-menu {
         display: none;
     }
+
     #hidden {
-        max-height: 190px;
+        max-height: 240px;
         overflow: hidden;
         transition: 0.3s;
     }
