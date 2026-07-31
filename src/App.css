@@ -111,20 +111,13 @@ img {
   padding-left: 3%;
   padding-right: 3%;
   overflow: clip;
-  background: linear-gradient(180deg, var(--gradient-col1), var(--gradient-col2)) fixed;
-  background-size: cover;
+  background: var(--third-color);
   animation: fadeIn 0.8s ease-in;
   position: relative;
 }
 
 .wrapper::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(circle at top left, var(--glow-one), transparent 34%),
-    radial-gradient(circle at bottom right, var(--glow-two), transparent 28%);
-  pointer-events: none;
+  display: none;
 }
 
 @keyframes fadeIn {
