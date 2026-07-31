@@ -2,11 +2,12 @@ import React from "react";
 import "./Landing.css";
 import { FaEnvelope, FaFileAlt, FaGithub, FaGraduationCap, FaLinkedin } from "react-icons/fa";
 import {
+  ABOUT_TEXT,
   FULL_NAME,
-  LANDING_DESCRIPTION,
   LANDING_SUBTITLE,
   PROFILE_HOVER_IMAGE,
   PROFILE_IMAGE,
+  RESEARCH_INTERESTS,
   SOCIAL_LINKS,
 } from "../../Util/data";
 import { trackOutboundLink } from "../../Util/analytics";
@@ -25,10 +26,15 @@ const Landing = () => {
 
   return (
     <section id="landing" className="landing">
-      <div className="text-content">
-        <h1>{FULL_NAME}</h1>
-        <h4 className="subtitle">{LANDING_SUBTITLE}</h4>
-        {LANDING_DESCRIPTION ? <p className="landing-description">{LANDING_DESCRIPTION}</p> : null}
+      <div className="image-container">
+        <img src={PROFILE_IMAGE} alt={FULL_NAME} className="default-image" />
+        <img src={PROFILE_HOVER_IMAGE} alt={`${FULL_NAME} portrait`} className="hover-image" />
+      </div>
+      <div className="profile-content">
+        <div className="profile-heading">
+          <h1>{FULL_NAME}</h1>
+          <h4 className="subtitle">{LANDING_SUBTITLE}</h4>
+        </div>
         <div className="social-links-container">
           <div className="email-link">
             <FaEnvelope className="contact-icon" aria-hidden="true" />
@@ -68,10 +74,14 @@ const Landing = () => {
             })}
           </div>
         </div>
-      </div>
-      <div className="image-container">
-        <img src={PROFILE_IMAGE} alt={FULL_NAME} className="default-image" />
-        <img src={PROFILE_HOVER_IMAGE} alt={`${FULL_NAME} portrait`} className="hover-image" />
+        <div className="profile-biography" dangerouslySetInnerHTML={{ __html: ABOUT_TEXT }} />
+        <div className="research-tags" aria-label="Research interests">
+          {RESEARCH_INTERESTS.map((interest) => (
+            <span key={interest} className="research-tag">
+              {interest}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );
