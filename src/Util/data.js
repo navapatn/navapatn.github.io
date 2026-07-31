@@ -32,7 +32,7 @@ export const SOCIAL_LINKS = [
     icon: "email",
     link: "mailto:nananuku@usc.edu",
     text: "nananuku@usc.edu",
-    showText: true,
+    showText: false,
   },
   {
     name: "Google Scholar",

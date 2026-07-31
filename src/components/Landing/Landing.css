@@ -31,24 +31,9 @@
 
 .social-links-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.8rem;
-  width: 100%;
+  align-items: center;
+  width: fit-content;
   margin-bottom: 20px;
-}
-
-.email-link {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: 100%;
-}
-
-.email-texts {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 .contact-icon,
@@ -61,20 +46,8 @@
   font-size: 1.35rem;
 }
 
-.email-link a {
-  text-decoration: none;
-  color: var(--second-color);
-  font-size: 1.05rem;
-}
-
-.email-link a:hover,
 .icon-links a:hover {
   color: var(--fourth-color);
-}
-
-.email-separator {
-  color: var(--second-color);
-  margin: 0 0.25rem;
 }
 
 .icon-links {

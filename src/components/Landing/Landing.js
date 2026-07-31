@@ -20,7 +20,6 @@ const ICON_MAP = {
 };
 
 const Landing = () => {
-  const emailLinks = SOCIAL_LINKS.filter((social) => social.showText);
   const iconLinks = SOCIAL_LINKS.filter((social) => !social.showText);
 
   return (
@@ -35,25 +34,6 @@ const Landing = () => {
           <h4 className="subtitle">{LANDING_SUBTITLE}</h4>
         </div>
         <div className="social-links-container">
-          <div className="email-link">
-            <FaEnvelope className="contact-icon" aria-hidden="true" />
-            <div className="email-texts">
-              {emailLinks.map((social, index) => (
-                <React.Fragment key={social.link}>
-                  <a
-                    href={social.link}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    aria-label={social.name}
-                    onClick={() => trackOutboundLink(social.name, social.link, "profile")}
-                  >
-                    <span className="email-text">{social.text}</span>
-                  </a>
-                  {index < emailLinks.length - 1 && <span className="email-separator">,&nbsp;</span>}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
           <div className="icon-links">
             {iconLinks.map((social) => {
               const Icon = ICON_MAP[social.icon];
@@ -65,6 +45,7 @@ const Landing = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label={social.name}
+                  title={social.name}
                   onClick={() => trackOutboundLink(social.name, social.link, "profile")}
                 >
                   {Icon ? <Icon className="contact-icon" aria-hidden="true" /> : null}
