@@ -398,7 +398,12 @@ export const EDUCATION = [
 ];
 
 export const ABOUT_TEXT = `
-  <p>I am Navapat (Pat), a Ph.D. student at USC's Information Sciences Institute (ISI), advised by Prof. <a href="https://usc-isi-i2.github.io/kejriwal/" target="_blank" rel="noopener noreferrer">Mayank Kejriwal</a> in the <a href="https://aicomplex.github.io/index.html" target="_blank" rel="noopener noreferrer">Artificial Intelligence and Complex Systems (AICS)</a> Group. My research addresses a critical gap in AI: how can we build systems that reason not just accurately, but rigorously, verifiably, and with full accountability?</p>
-  <p>I work at the intersection of neurosymbolic AI, large language models, and formal logic to ground LLMs in rigorous symbolic reasoning. The core challenge I address: complex, real-world knowledge (like clinical guidelines) is non-monotonic and full of exceptions. How can we tether LLMs to formal logic and knowledge graphs so their reasoning is transparent, traceable to authoritative sources, and explainable? My approach combines LLMs with defeasible logic reasoners and structured knowledge representations to enable verifiable AI reasoning over complex domains.</p>
-  <p>I am conducting research under DARPA's <a href="https://www.darpa.mil/research/programs/codord" target="_blank" rel="noopener noreferrer">Human-AI Communication for Deontic Reasoning (CODORD)</a> program, developing scalable methods for humans to express and refine complex obligations, permissions, and prohibitions in natural language.</p>
+  <p>I am Navapat (Pat), a Ph.D. student at USC's Information Sciences Institute (ISI), advised by Prof. <a href="https://usc-isi-i2.github.io/kejriwal/" target="_blank" rel="noopener noreferrer">Mayank Kejriwal</a> in the <a href="https://aicomplex.github.io/index.html" target="_blank" rel="noopener noreferrer">Artificial Intelligence and Complex Systems (AICS)</a> Group. I build high-assurance AI systems for domains where errors have real consequences. My research asks how AI can reason accurately, transparently, and accountably when the underlying knowledge is complex and full of exceptions.</p>
+  <p>Working across neurosymbolic AI, large language models, formal logic, and knowledge graphs, I develop methods that ground language models in explicit symbolic reasoning, trace conclusions to authoritative sources, and let people refine the rules that guide them. Through DARPA's <a href="https://www.darpa.mil/research/programs/codord" target="_blank" rel="noopener noreferrer">Human-AI Communication for Deontic Reasoning (CODORD)</a> program, I am developing scalable methods for expressing and reasoning about natural-language obligations, permissions, and prohibitions.</p>
+  <p>I focus on three connected directions:</p>
+  <ol>
+    <li><strong>Rigorously evaluating and verifying</strong> AI systems</li>
+    <li><strong>Grounding AI systems</strong> in formal logic and structured knowledge</li>
+    <li><strong>Building personalized knowledge structures</strong> for adaptive AI systems</li>
+  </ol>
 `;

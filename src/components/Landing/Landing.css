@@ -97,6 +97,18 @@
   margin-bottom: 0;
 }
 
+.profile-biography ol {
+  margin: 0.35rem 0 0;
+  padding-left: 1.5rem;
+}
+
+.profile-biography li {
+  font-size: 1.08rem;
+  line-height: 1.72;
+  margin-bottom: 0.3rem;
+  padding-left: 0.25rem;
+}
+
 .profile-biography a {
   color: inherit;
   text-decoration: underline;
@@ -231,6 +243,11 @@
   }
 
   .profile-biography p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .profile-biography li {
     font-size: 1rem;
     line-height: 1.65;
   }
