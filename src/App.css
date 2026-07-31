@@ -85,7 +85,7 @@ html {
 }
 
 body {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Geist", "IBM Plex Sans", sans-serif;
   background: var(--third-color);
   color: var(--first-color);
   font-size: 17px;
@@ -155,9 +155,10 @@ section {
 
 h1,
 h2 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Geist", "IBM Plex Sans", sans-serif;
   color: var(--first-color);
-  letter-spacing: 0.01em;
+  letter-spacing: -0.025em;
+  font-weight: 700;
 }
 
 h1 {

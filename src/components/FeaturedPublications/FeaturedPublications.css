@@ -39,7 +39,7 @@
   justify-content: center;
   background: linear-gradient(180deg, rgba(94, 139, 140, 0.2), rgba(215, 194, 163, 0.24));
   color: var(--card-text);
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Geist", "IBM Plex Sans", sans-serif;
   font-size: 2rem;
   letter-spacing: 0.04em;
 }
@@ -63,6 +63,7 @@
 }
 
 .featured-publication-date {
+  font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-weight: 700;
   color: var(--fourth-color);
   margin: 10px 0 4px;

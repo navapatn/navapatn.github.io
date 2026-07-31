@@ -20,6 +20,13 @@
   text-transform: uppercase;
 }
 
+.research-group-label,
+.research-tab,
+.research-venue,
+.research-links {
+  font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
 .research-group-trigger,
 .research-group-options button {
   border: 1px solid var(--border-color);
@@ -186,7 +193,7 @@
   justify-content: center;
   background: linear-gradient(180deg, rgba(94, 139, 140, 0.14), rgba(215, 194, 163, 0.28));
   color: var(--card-text);
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Geist", "IBM Plex Sans", sans-serif;
   font-size: 2.2rem;
   font-weight: 700;
 }
@@ -201,7 +208,7 @@
 .research-entry h2 {
   margin: 0 0 0.55rem;
   color: var(--card-text);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Geist", "IBM Plex Sans", sans-serif;
   font-size: 1.34rem;
   font-weight: 700;
   line-height: 1.33;
