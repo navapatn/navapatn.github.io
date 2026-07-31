@@ -121,25 +121,6 @@
   color: var(--fourth-color);
 }
 
-.research-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.research-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35rem 0.7rem;
-  border: 1px solid var(--fourth-color);
-  border-radius: 999px;
-  color: var(--fourth-color);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
 .image-container {
   position: relative;
   flex-shrink: 0;
@@ -252,7 +233,4 @@
     line-height: 1.65;
   }
 
-  .research-tags {
-    justify-content: center;
-  }
 }

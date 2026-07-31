@@ -7,7 +7,6 @@ import {
   LANDING_SUBTITLE,
   PROFILE_HOVER_IMAGE,
   PROFILE_IMAGE,
-  RESEARCH_INTERESTS,
   SOCIAL_LINKS,
 } from "../../Util/data";
 import { trackOutboundLink } from "../../Util/analytics";
@@ -75,13 +74,6 @@ const Landing = () => {
           </div>
         </div>
         <div className="profile-biography" dangerouslySetInnerHTML={{ __html: ABOUT_TEXT }} />
-        <div className="research-tags" aria-label="Research interests">
-          {RESEARCH_INTERESTS.map((interest) => (
-            <span key={interest} className="research-tag">
-              {interest}
-            </span>
-          ))}
-        </div>
       </div>
     </section>
   );
