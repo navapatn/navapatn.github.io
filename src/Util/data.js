@@ -62,6 +62,11 @@ export const SOCIAL_LINKS = [
 
 export const NEWS = [
   {
+    date: "Oct 2026",
+    content:
+      "🎤 I gave talks on <strong>recursive self-refinement (RSI)</strong> at <strong>LA Tech Week</strong> and <strong>SF Tech Week</strong>.",
+  },
+  {
     date: "May 2026",
     content: "💼 I am joining <strong>GRAIL AI</strong> as a research scientist intern!",
   },
